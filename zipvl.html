@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ZIPVL: Efficient Large Vision-Language Models with Dynamic Token Sparsification and KV Cache Compression improves LVLM efficiency through dynamic token selection and KV cache compression.">
+  <meta name="keywords" content="ZIPVL, LVLM, Dynamic Token Sparsification, KV Cache Compression, Vision-Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZIPVL: Efficient Large Vision-Language Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yourdomain.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">Related Research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/ThisisBillhe/ZipCache">ZipCache</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ZIPVL: Efficient Large Vision-Language Models With Dynamic Token Sparsification and KV Cache Compression</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://hexy.tech">Yefei He</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="#">Feng Chen</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="#">Jing Liu</a><sup>4</sup>,</span>
+            <span class="author-block">
+              <a href="#">Wenqi Shao</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="#">Hong Zhou</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Kaipeng Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="#">Bohan Zhuang</a><sup>1,4</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai AI Laboratory,</span>
+            <span class="author-block"><sup>3</sup>The University of Adelaide,</span>
+            <span class="author-block"><sup>4</sup>ZIP Lab, Monash University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2410.08584"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/your-repo/zipvl" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">ZIPVL: A Unified Framework for Dynamic Token Sparsification and KV Cache Compression.</h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract Section -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            <p>
+              ZIPVL addresses the computational and memory bottlenecks of large vision-language models by introducing dynamic token sparsification and mixed-precision quantization of the KV cache.
+            </p>
+            <p>
+              Our approach adaptively adjusts the token sparsity ratio and applies mixed-precision quantization, achieving a 2.6× speedup in the prefill phase and a 50% reduction in GPU memory usage with minimal accuracy loss.
+            </p>
+          </div>
+          
+      </div>
+    </div>
+
+    <!-- Video Section
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/video-id" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{he2024zipvl,
+  author    = {Yefei He and Feng Chen and others},
+  title     = {ZIPVL: Efficient Large Vision-Language Models with Dynamic Token Sparsification and KV Cache Compression},
+  journal   = {arXiv preprint arXiv:2410.08584},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/your-repo/zipvl"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This project is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. The website template is based on <a
+            href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
